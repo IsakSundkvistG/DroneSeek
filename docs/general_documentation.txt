@@ -1,0 +1,16 @@
+Have sourced drone data from: 
+-NEAPTIDE
+-Salford
+-Svanström
+-El Emadi 
+
+Have sourced non-drone data from: 
+-UrbanSound8k
+
+First trial: 
+I've included all drone data from
+-NEAPTIDE
+-Salford
+-Svanström
+-El Emadi, 
+and folds 1 and 2 from UrbanSound8k, to train the model. There are about 1800 data points of each class. 

@@ -1,0 +1,15 @@
+1) UrbanSound8k comes in ten pre-sorted folds for which the data is correlated inside each respective
+fold but independent from other folds --> must pay attention to this when doing k-fold cross-val as 
+cross validating on randomly mixed set will use "seen" data as test data. 
+
+Solution: Keep UrbanSound8k separately sorted in their given folds (as in download). Then take all
+other data, shuffle and split it randomly into ten folds, then insert that data into the UrbanSound8k
+folds. Use that split for cross-validation! 
+--------------------------------------------------------------------------------------------------
+2) Different length of wav files --> spectrograms with different length black blocks when zero-padding. 
+Could maybe cause problems with learning, CNN might learn 'drones come at beginning of image' and 
+things of the like. 
+
+Solution: Add a mask channel to each spectrogram where it is just ones for where the signal is 
+and zeros for black blocks. Telling the CNN what is a signal and what isn't. 
+
